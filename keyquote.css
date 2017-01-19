@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  background: #eee;
+}
+
+body {
+  width: 80%;
+  min-width: 1024px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem 3rem;
+  height: inherit;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/* typography */
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 0 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 0 0 2rem;
+}
+
+p, button, li {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+}
+
+.quotes {
+  flex: 3;
+  margin-right: 2rem;
+}
+
+.full-text {
+  flex: 5;
+}
+
+.quotes ul, .full-text div {
+  height: calc(100% - 30rem);
+  margin: 0 0 2rem;
+  overflow: scroll;
+}
