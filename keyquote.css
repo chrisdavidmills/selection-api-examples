@@ -3,7 +3,6 @@
 }
 
 html {
-  height: 100%;
   font-size: 10px;
   background: #eee;
 }
@@ -14,8 +13,8 @@ body {
   margin: 0 auto;
   background: white;
   padding: 2rem 3rem;
-  height: inherit;
-  overflow: hidden;
+  height: 620px;
+  overflow: auto;
 }
 
 .wrapper {
