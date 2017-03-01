@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>setBaseAndExtent example</title>
+  </head>
+  <body>
+    <h1>setBaseAndExtent example</h1>
+    <div>
+      <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+      <p>MIDDLE</p>
+      <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+    </div>
+
+    <div>
+      <p>
+        <label for="aOffset">Anchor offset</label>
+        <input id="aOffset" name="aOffset" type="number" value="0">
+      </p>
+      <p>
+        <label for="fOffset">Focus offset</label>
+        <input id="fOffset" name="fOffset" type="number" value="0">
+      </p>
+      <p><button>Capture selection</button></p>
+    </div>
+
+    <p><strong>Output</strong>: <span class="output"></span></p>
+    <script>
+
+      var one = document.querySelector('.one');
+      var two = document.querySelector('.two');
+
+      var aOffset = document.getElementById('aOffset');
+      var fOffset = document.getElementById('fOffset');
+
+      var button = document.querySelector('button');
+
+      var output = document.querySelector('.output');
+
+      var selection;
+
+      button.onclick = function() {
+        try {
+          selection = document.getSelection();
+          selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
+          var text = selection.toString();
+          output.textContent = text;
+        } catch(e) {
+          output.textContent = e.message;
+        }
+      }
+
+    </script>
+    </div>
+  </body>
+</html>
